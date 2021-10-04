@@ -1,4 +1,4 @@
-import pathlib
+import pathlib, datetime
 from file_grabber import grab_files
 from getmac import get_mac_address as gma
 
@@ -8,10 +8,16 @@ cwd = pathlib.Path.cwd()
 print(gma())
 mac_address = str(gma())
 
-file_list = [
+today = str(datetime.datetime.now().strftime("%Y-%m-%d"))
+print(today)
+
+pre_file_list = [
     "schedule_middle_school.tsv",
     "sections_middle_school.tsv",
 ]
+
+file_list = [today + "-" + file_name for file_name in pre_file_list]
+
 
 grab_files(
     file_list,
