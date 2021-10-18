@@ -16,10 +16,12 @@ print(today)
 
 pre_file_list = [
     "schedule_middle_school.tsv",
-    "sections_middle_school.tsv",
     "schedule_high_school.tsv",
-    "sections_high_school.tsv",
 ]
+
+# "sections_middle_school.tsv",
+# "sections_high_school.tsv",
+
 
 file_list = [today + "-" + file_name for file_name in pre_file_list]
 
