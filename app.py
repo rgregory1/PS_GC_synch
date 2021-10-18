@@ -4,6 +4,9 @@ from getmac import get_mac_address as gma
 
 cwd = pathlib.Path.cwd()
 
+
+timestamp = datetime.datetime.now()
+print("\n\n" + str(timestamp))
 # home mac address is a4:83:e7:72:41:a3
 print(gma())
 mac_address = str(gma())
